@@ -111,7 +111,7 @@ function App() {
         {isWin && (
           <div className="mb-4">
             <p className="mb-4">You win!</p>
-            <Button onClick={() => setBoxes(5)}>Play again</Button>
+            <Button onClick={() => setBoxes(numberOfBoxes)}>Play again</Button>
           </div>
         )}
         <p className="mb-4">Days: {days}</p>
