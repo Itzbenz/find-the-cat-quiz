@@ -25,10 +25,16 @@ function calculateSuperpositions(showSuperpositionProbabilities: number[], guess
   for (let i = 0; i < showSuperpositionProbabilities.length; i++) {
     let neighbourCount = 0;
     if(i - 1 >= 0 && i - 1 !== guessedPosition) {
-      neighbourCount++
+      //check if neighbour has quantum cat
+      if(showSuperpositionProbabilities[i - 1] > 0) {
+        neighbourCount++
+      }
     }
     if(i + 1 < showSuperpositionProbabilities.length && i + 1 !== guessedPosition) {
-      neighbourCount++
+      //check if neighbour has quantum cat
+      if(showSuperpositionProbabilities[i + 1] > 0) {
+        neighbourCount++
+      }
     }
     newSuperpositions.push(neighbourCount)
     //neighbourCount is the number of quantum cats goes to this box
